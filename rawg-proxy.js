@@ -9,7 +9,7 @@ app.use(cors());
 // The target RAWG API
 const RAWG_BASE = 'https://api.rawg.io/api';
 
-app.get('*', async (req, res) => {
+app.use(async (req, res) => {
     try {
         const path = req.path;
         console.log(`[Proxy Request] Path: ${path}`);
